@@ -2,7 +2,7 @@ struct UF{
   vi par;
   vi rank;
 
-  union_find(int n){
+  UF(int n){
     par.resize(n);
     rank.resize(n);
   }
