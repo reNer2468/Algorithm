@@ -1,4 +1,4 @@
-struct node{
+struct BT{
   int val;
   node *lch,*rch;
 
