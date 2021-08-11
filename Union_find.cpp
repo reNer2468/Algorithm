@@ -1,4 +1,4 @@
-struct union_find{
+struct UF{
   vi par;
   vi rank;
 
