@@ -1,3 +1,8 @@
+typedef long long ll;
+#define repin(i,start,end) for(ll i=start,i<end;i++)
+using namespace std;
+using vi=vector<int>;
+
 struct UF{
   vi par;
   vi rank;
