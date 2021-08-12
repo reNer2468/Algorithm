@@ -1,3 +1,9 @@
+typedef long long ll;
+#define repin(i,start,end) for(ll i=start,i<end;i++)
+using namespace std;
+using vi=vector<int>;
+using vvi=vector<vector<int>>;
+
 bool dfs(vvi& g,vi& color,int v,int c){
   color.at(v)=c;
   repin(i,0,g.at(v).size()){
