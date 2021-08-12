@@ -1,5 +1,6 @@
 typedef long long ll;
 #define repin(i,start,end) for(ll i=start,i<end;i++)
+using namespace std;
 using vi=vector<int>;
 constexpr int INF=(1<<30)-1;
 constexpr ll LLINF=(1LL<<60)-1;
