@@ -1,3 +1,8 @@
+typedef long long ll;
+#define repin(i,start,end) for(ll i=start,i<end;i++)
+using namespace std;
+using vi=vector<int>;
+
 struct edge{int from,to,cost;};
 
 bool Find_Negative_Loop(vector<edge>& es,vi& d,int v){
