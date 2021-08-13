@@ -1,3 +1,10 @@
+typedef long long ll;
+#define repin(i,start,end) for(ll i=start,i<end;i++)
+using namespace std;
+using vi=vector<int>;
+constexpr int INF=(1<<30)-1;
+constexpr ll LLINF=(1LL<<60)-1;
+
 void Warshall_Floyd(vvi& d,int v){
   repin(k,0,v) repin(i,0,v) repin(j,0,v)
     d.at(i).at(j)=min(d.at(i).at(j),d.at(i).at(k)+d.at(k).at(j));
