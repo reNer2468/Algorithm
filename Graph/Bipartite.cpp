@@ -14,6 +14,11 @@ bool Check_Bipartite(vvi& g,vi& color,int v,int c){
   return true;
 }
 
+/*
+無向グラフとして考える。
+グラフは1から始めるものとする。
+*/
+
 int main(){
   cin.tie(0);
   ios::sync_with_stdio(0);
@@ -22,8 +27,9 @@ int main(){
   vvi g(n);
   repin(i,0,n){
     while(1){
-      int a; cin>>a; g.at(i).push_back(a);
-      if(g.at(i).back()==-1) break;
+      int a; cin>>a;
+      if(a==-1) break;
+      g.at(i).push_back(a-1); g.at(a-1).push_back(i);
     }    
     g.at(i).pop_back();
   }
