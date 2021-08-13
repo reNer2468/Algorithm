@@ -4,11 +4,11 @@ using namespace std;
 using vi=vector<int>;
 using vvi=vector<vector<int>>;
 
-bool dfs(vvi& g,vi& color,int v,int c){
+bool Check_Bipartite(vvi& g,vi& color,int v,int c){
   color.at(v)=c;
   repin(i,0,g.at(v).size()){
     if(color.at(g.at(v).at(i))==c) return false;
-    if(color.at(g.at(v).at(i))==0&&!dfs(g,color,g.at(v).at(i),-c)) return false;
+    if(color.at(g.at(v).at(i))==0&&!Check_Bipartite(g,color,g.at(v).at(i),-c)) return false;
   }
 
   return true;
@@ -29,7 +29,7 @@ int main(){
   }
 
   vi color(n,0);
-  repin(i,0,n) if(color.at(i)==0) if(!dfs(g,color,i,1)) {cout<<"No"<<endl; return 0;}
+  repin(i,0,n) if(color.at(i)==0) if(!Check_Bipartite(g,color,i,1)) {cout<<"No"<<endl; return 0;}
   cout<<"Yes"<<endl;
   
   return 0;
