@@ -22,7 +22,7 @@ void Bellman_Ford(vector<edge>& es,vi& d,int s){
   }
 }
 
-/*有向グラフ前提で考える。*/
+/*無向グラフ前提で考える。*/
 int main(){
   cin.tie(0);
   ios::sync_with_stdio(0);
