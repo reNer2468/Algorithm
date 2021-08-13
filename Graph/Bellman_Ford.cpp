@@ -22,7 +22,10 @@ void Bellman_Ford(vector<edge>& es,vi& d,int s){
   }
 }
 
-/*無向グラフ前提で考える。*/
+/*
+有向グラフ前提で考える。
+グラフは1からvまで数えるとする。（つまり、0に直す必要あり。）
+*/
 int main(){
   cin.tie(0);
   ios::sync_with_stdio(0);
@@ -32,12 +35,10 @@ int main(){
   repin(i,0,e){
     int a,b,c; cin>>a>>b>>c;
     es.push_back({a-1,b-1,c});
-    es.push_back({b-1,a-1,c});
   }
 
   vi d(v,INF);
   int s; cin>>s;
-  Bellman_Ford(es,d,s);
-  cout<<d.at(6)<<endl;
+  Bellman_Ford(es,d,s-1);
   return 0;
 }
